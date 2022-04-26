@@ -1,0 +1,47 @@
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ### Fonts
+
+// - Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+// - Weights: 300, 600, 800
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+// ## Colors
+
+// ### Light Mode
+
+:root {
+  --Text: hsl(200, 15%, 8%);
+  --BG: hsl(0, 0%, 98%);
+  --Input: hsl(0, 0%, 52%);
+  --Elements: hsl(0, 0%, 100%);
+}
+
+.dark {
+  --Text: hsl(0, 0%, 100%);
+  --BG: hsl(207, 26%, 17%);
+  --Elements: hsl(209, 23%, 22%);
+}
+
+// ## Typography
+
+// ### Body Copy
+
+// - Homepage Items: 14px
+// - Detail Page: 16px
+
+// ## Icons
+
+// For the icons, you can use a font icon library. Don't worry if the icons that you choose don't look exactly like they do on the design.
+
+// Some suggestions can be found below:
+
+// - [Font Awesome](https://fontawesome.com)
+// - [IcoMoon](https://icomoon.io)
+// - [Ionicons](https://ionicons.com)
