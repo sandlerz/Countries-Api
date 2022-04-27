@@ -1,0 +1,16 @@
+img {
+  height: auto;
+  display: block;
+}
+
+.country-flag {
+  max-width: 26rem;
+}
+
+.img-container {
+  width: 26rem;
+  height: 16rem;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+}

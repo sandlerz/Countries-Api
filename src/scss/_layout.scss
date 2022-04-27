@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Elements);
+  padding: 0 8rem;
+  height: 8rem;
+}
+
+.dark-mode {
+  display: flex;
+  font-weight: bolder;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 26rem);
+  gap: 7.5rem;
+}
+
+main {
+  width: 144rem;
+}

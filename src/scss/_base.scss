@@ -10,7 +10,7 @@
 // - Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
 // - Weights: 300, 600, 800
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 // ## Colors
 
@@ -45,3 +45,24 @@
 // - [Font Awesome](https://fontawesome.com)
 // - [IcoMoon](https://icomoon.io)
 // - [Ionicons](https://ionicons.com)
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito Sans', Helvetica, sans-serif;
+  font-size: 1.4rem;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
