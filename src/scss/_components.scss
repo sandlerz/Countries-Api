@@ -1,16 +1,41 @@
-img {
-  height: auto;
-  display: block;
-}
+@use './base' as *;
 
-.country-flag {
-  max-width: 26rem;
-}
-
-.img-container {
-  width: 26rem;
-  height: 16rem;
+.country-card {
+  background-color: var(--Elements);
+  height: 33.5rem;
+  border-radius: 1rem;
   overflow: hidden;
-  display: grid;
-  place-content: center;
+
+  .img-container {
+    width: 26rem;
+    height: 16rem;
+    overflow: hidden;
+
+    .country-flag {
+      width: 26rem;
+      height: 16rem;
+      object-fit: fill;
+    }
+  }
+
+  .card__description {
+    padding: 2.5rem 2.5rem 5rem;
+    height: 17.5rem;
+  }
+
+  .card__name {
+    color: var(--Text);
+    margin-bottom: 1.5rem;
+    white-space: pre-line;
+  }
+
+  .card__text {
+    color: var(--Text);
+    font-weight: 600;
+  }
+
+  .card__text2 {
+    font-weight: 300;
+    color: var(--Text);
+  }
 }

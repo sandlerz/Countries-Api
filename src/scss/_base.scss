@@ -63,6 +63,10 @@ body {
   font-family: 'Nunito Sans', Helvetica, sans-serif;
   font-size: 1.4rem;
   min-height: 100vh;
-  display: grid;
-  place-content: center;
+  background-color: var(--BG);
+}
+
+img {
+  height: auto;
+  display: block;
 }

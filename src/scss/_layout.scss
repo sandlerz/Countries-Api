@@ -1,23 +1,53 @@
+@use './base' as *;
+
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   background-color: var(--Elements);
-  padding: 0 8rem;
-  height: 8rem;
-}
+  width: 100%;
+  margin-bottom: 5rem;
 
-.dark-mode {
-  display: flex;
-  font-weight: bolder;
-}
+  .header-container {
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem;
+    max-width: 144rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--Text);
 
-.countries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 26rem);
-  gap: 7.5rem;
+    .dark-mode {
+      display: flex;
+      font-weight: bolder;
+    }
+  }
 }
 
 main {
-  width: 144rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  .inputs_container {
+    max-width: 144rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8rem;
+  }
+
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 26rem);
+    gap: 7.5rem;
+    width: 100%;
+    max-width: 144rem;
+    padding: 0 8rem;
+  }
 }

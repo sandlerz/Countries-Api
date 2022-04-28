@@ -2,7 +2,7 @@
   "name": "countries-api",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https//:sandlerz.github.io/Countries-Api",
+  "homepage": "https://sandlerz.github.io/Countries-Api",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
