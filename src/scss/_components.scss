@@ -3,8 +3,10 @@
 .country-card {
   background-color: var(--Elements);
   height: 33.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: var(--Box-shadow);
+  cursor: pointer;
 
   .img-container {
     width: 26rem;
@@ -17,25 +19,35 @@
       object-fit: fill;
     }
   }
+}
+.card__description {
+  padding: 2.5rem 2.5rem 5rem;
+  height: 17.5rem;
+}
 
-  .card__description {
-    padding: 2.5rem 2.5rem 5rem;
-    height: 17.5rem;
+.inputs_container {
+  max-width: 144rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+
+  .input__text {
+    border: none;
+    width: 48rem;
+    height: 5.5rem;
+    box-shadow: var(--Box-shadow);
+    background: url(../assets/images/search-icon.svg) no-repeat left
+      var(--Elements);
+    background-position: 3rem;
+    padding-left: 6.5rem;
+    font-size: 1.4rem;
+    color: var(--Input);
   }
-
-  .card__name {
-    color: var(--Text);
-    margin-bottom: 1.5rem;
-    white-space: pre-line;
+  .input__text:focus {
+    outline: none;
   }
-
-  .card__text {
-    color: var(--Text);
-    font-weight: 600;
-  }
-
-  .card__text2 {
-    font-weight: 300;
-    color: var(--Text);
+  .input__text::placeholder {
+    color: var(--Input);
   }
 }

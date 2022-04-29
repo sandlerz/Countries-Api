@@ -4,6 +4,7 @@ import App from './App'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './scss/index.scss'
 import Home from './pages/Home'
+import Country from './pages/Country'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -12,9 +13,9 @@ root.render(
       <Routes>
         <Route path="/Countries-Api" element={<App />}>
           <Route index element={<Home />} />
-          {/* <Route path="Countries-Api" element={<App />} /> */}
-          {/* <Route path=":countryId" element={country}/> */}
+          <Route path=":country" element={<Country />} />
         </Route>
+        <Route path="*" element={<main>he</main>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

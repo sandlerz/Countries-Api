@@ -6,6 +6,7 @@ header {
   background-color: var(--Elements);
   width: 100%;
   margin-bottom: 5rem;
+  box-shadow: var(--Box-shadow);
 
   .header-container {
     height: 8rem;
@@ -21,7 +22,15 @@ header {
 
     .dark-mode {
       display: flex;
-      font-weight: bolder;
+      align-items: center;
+      font-weight: 600;
+      gap: 1rem;
+      font-size: 1.8rem;
+      cursor: pointer;
+
+      .dark-mode__icon {
+        max-width: 3rem;
+      }
     }
   }
 }
@@ -34,20 +43,108 @@ main {
   align-items: center;
   gap: 5rem;
 
-  .inputs_container {
-    max-width: 144rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 8rem;
-  }
-
   .countries-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 26rem);
-    gap: 7.5rem;
+    justify-content: space-between;
+    grid-row-gap: 4vw;
     width: 100%;
     max-width: 144rem;
     padding: 0 8rem;
+  }
+}
+
+.btn__container {
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
+
+  .back__btn {
+    align-self: start;
+    width: 13.5rem;
+    height: 4rem;
+    border: none;
+    box-shadow: var(--Box-shadow);
+    background-color: var(--Elements);
+    cursor: pointer;
+    margin-bottom: 7rem;
+  }
+}
+
+.country_container {
+  display: flex;
+  width: 144rem;
+  padding: 0 8rem;
+  font-size: 1.7rem;
+
+  .country__container__img {
+    width: 56rem;
+    height: 40rem;
+    margin-right: 8rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .country__container__text {
+    width: 64rem;
+    padding: 5rem 0 4rem 8rem;
+    height: auto;
+
+    .tittle {
+      margin-bottom: 3rem;
+    }
+
+    .country__container__text__layout {
+      display: flex;
+      width: 100%;
+      margin-bottom: 4.5rem;
+
+      .country__container__text__right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+      }
+      .country__container__text__left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+      }
+    }
+
+    .border__country__container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      p {
+        width: 15rem;
+        align-self: start;
+      }
+
+      .border__country__container__btn {
+        width: 40rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .border__country {
+        display: grid;
+        place-content: center;
+        width: fit-content;
+        padding: 0 2.5rem;
+        height: 3rem;
+        background-color: var(--Elements);
+        box-shadow: var(--Box-shadow);
+        cursor: pointer;
+        user-select: none;
+      }
+    }
   }
 }

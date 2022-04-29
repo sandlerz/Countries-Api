@@ -21,12 +21,14 @@
   --BG: hsl(0, 0%, 98%);
   --Input: hsl(0, 0%, 52%);
   --Elements: hsl(0, 0%, 100%);
+  --Box-shadow: 0.4rem 0.4rem 0.5rem 0rem hsl(0, 0%, 95%);
 }
 
 .dark {
   --Text: hsl(0, 0%, 100%);
   --BG: hsl(207, 26%, 17%);
   --Elements: hsl(209, 23%, 22%);
+  --Box-shadow: 0.4rem 0.4rem 0.5rem 0rem hsl(207, 26%, 14%);
 }
 
 // ## Typography
@@ -69,4 +71,31 @@ body {
 img {
   height: auto;
   display: block;
+}
+
+.text {
+  color: var(--Text);
+  font-weight: 600;
+}
+
+.text2 {
+  font-weight: 300;
+  color: var(--Text);
+}
+
+.tittle {
+  color: var(--Text);
+}
+
+button {
+  font-family: 'Nunito Sans', Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--Text);
+}
+
+.border__country:hover,
+.back__btn:hover {
+  filter: brightness(1.5);
+  transition: filter 0.2s;
 }
