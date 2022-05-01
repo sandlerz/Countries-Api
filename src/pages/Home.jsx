@@ -6,22 +6,31 @@ import ReactLoading from 'react-loading'
 
 export default function Home() {
   const [dataCountries, setDataCountries] = useState([])
+  const [filter, setFilter] = useState('')
   const navigate = useNavigate()
 
   useEffect(() => {
     getCountries().then(data => setDataCountries(data))
   }, [])
 
-  const countries = dataCountries.map(country => (
-    <Countries
-      key={country.name}
-      name={country.name}
-      population={country.population}
-      region={country.region}
-      capital={country.capital}
-      flag={country.flag}
-    />
-  ))
+  let countries = dataCountries
+
+  if (dataCountries.length > 0) {
+    countries = dataCountries
+      .filter(country =>
+        country.name.toLowerCase().includes(filter.toLowerCase())
+      )
+      .map(country => (
+        <Countries
+          key={country.name}
+          name={country.name}
+          population={country.population}
+          region={country.region}
+          capital={country.capital}
+          flag={country.flag}
+        />
+      ))
+  }
 
   const handleEnter = event => {
     const { key, target } = event
@@ -30,6 +39,11 @@ export default function Home() {
     }
   }
 
+  const handleFilter = event => {
+    const { value } = event.target
+    setFilter(value)
+  }
+  console.log(filter)
   return (
     <main>
       <div className="inputs_container">
@@ -38,6 +52,8 @@ export default function Home() {
           className="input__text"
           type="text"
           placeholder="Search for a country..."
+          onChange={handleFilter}
+          value={filter}
         />
         <input type="text" />
       </div>

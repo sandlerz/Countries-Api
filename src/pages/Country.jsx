@@ -97,13 +97,15 @@ export default function Country() {
                 <p className="text">
                   Currencies:{' '}
                   <span className="text2">
-                    {country.currencies.map(currency => currency.name)}
+                    {country.currencies &&
+                      country.currencies.map(currency => currency.name)}
                   </span>
                 </p>
                 <p className="text">
                   Languages:{' '}
                   <span className="text2">
-                    {country.languages.map(language => language.name)}
+                    {country.languages &&
+                      country.languages.map(language => language.name)}
                   </span>
                 </p>
               </div>
