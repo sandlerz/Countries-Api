@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import getCountries from '../services/data'
 import Countries from '../components/Countries'
 import { useNavigate } from 'react-router-dom'
+import ReactLoading from 'react-loading'
 
 export default function Home() {
   const [dataCountries, setDataCountries] = useState([])
@@ -23,9 +24,9 @@ export default function Home() {
   ))
 
   const handleEnter = event => {
-    const { key } = event
+    const { key, target } = event
     if (key === 'Enter') {
-      navigate(`/Countries-Api/${null}`)
+      navigate(`/${target.value}`)
     }
   }
 
@@ -40,7 +41,11 @@ export default function Home() {
         />
         <input type="text" />
       </div>
-      <div className="countries-grid">{countries}</div>
+      {dataCountries.length === 0 ? (
+        <ReactLoading type="bubbles" height={600} width={300} />
+      ) : (
+        <div className="countries-grid">{countries}</div>
+      )}
     </main>
   )
 }

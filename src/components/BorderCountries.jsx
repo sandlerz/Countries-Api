@@ -11,7 +11,7 @@ export default function BorderCountries({ country }) {
   }, [])
 
   const handleBorderCountry = () => {
-    navigate(`/Countries-Api/${dataCountry}`)
+    navigate(`/${dataCountry}`)
   }
 
   return (

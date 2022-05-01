@@ -2,7 +2,8 @@ import { useParams } from 'react-router-dom'
 import { getCountry } from '../services/data'
 import { useEffect, useState } from 'react'
 import BorderCountries from '../components/BorderCountries'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Navigate } from 'react-router-dom'
+import ReactLoading from 'react-loading'
 
 export default function Country() {
   const [country, setCountry] = useState([])
@@ -15,12 +16,39 @@ export default function Country() {
   }, [params])
 
   const handleHome = () => {
-    navigate('/Countries-Api')
+    navigate('/')
   }
 
   const handleBack = () => {
     navigate(-1)
   }
+
+  if (country === undefined) {
+    return (
+      <main>
+        <div>
+          <div className="btn__container" style={{ width: '1440px' }}>
+            <button onClick={handleBack} className="back__btn">
+              ⬅ Back
+            </button>
+            <button onClick={handleHome} className="back__btn">
+              Home
+            </button>
+          </div>
+        </div>
+        <p className="text2">Error: 404</p>
+        <h1 className="text">Country No Found Error</h1>
+        <ReactLoading type="bubbles" height={300} width={300} />
+      </main>
+    )
+  }
+
+  if (country.length === 0)
+    return (
+      <main>
+        <ReactLoading type="bubbles" height={300} width={300} />
+      </main>
+    )
 
   return (
     <main>
@@ -35,9 +63,7 @@ export default function Country() {
         </div>
         <div className="country_container">
           <div className="country__container__img">
-            {country.flags && (
-              <img src={country.flags.svg} alt={`${country.name}'s flag`} />
-            )}
+            <img src={country.flags.svg} alt={`${country.name}'s flag`} />
           </div>
           <div className="country__container__text">
             <h1 className="tittle">{country.name}</h1>
@@ -50,7 +76,7 @@ export default function Country() {
                 <p className="text">
                   Population:{' '}
                   <span className="text2">
-                    {country.population && country.population.toLocaleString()}
+                    {country.population.toLocaleString()}
                   </span>
                 </p>
                 <p className="text">
@@ -71,15 +97,13 @@ export default function Country() {
                 <p className="text">
                   Currencies:{' '}
                   <span className="text2">
-                    {country.currencies &&
-                      country.currencies.map(currency => currency.name)}
+                    {country.currencies.map(currency => currency.name)}
                   </span>
                 </p>
                 <p className="text">
                   Languages:{' '}
                   <span className="text2">
-                    {country.languages &&
-                      country.languages.map(language => language.name)}
+                    {country.languages.map(language => language.name)}
                   </span>
                 </p>
               </div>

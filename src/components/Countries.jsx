@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Countries({ name, population, region, capital, flag }) {
   const navigate = useNavigate()
   const handleClick = () => {
-    navigate(`/Countries-Api/${name}`)
+    navigate(`/${name}`)
   }
 
   return (

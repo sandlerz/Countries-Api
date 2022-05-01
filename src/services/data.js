@@ -42,7 +42,6 @@ export const getBorderCountry = async name => {
     if (response.ok) {
       const data = await response.json()
       const borderCountry = data.name
-      console.log(borderCountry)
       return borderCountry
     }
     throw new Error('Request failed')
