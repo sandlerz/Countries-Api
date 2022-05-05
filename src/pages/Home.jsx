@@ -55,7 +55,7 @@ export default function Home () {
       </div>
       {dataCountries.length === 0
         ? (
-          <ReactLoading type='bubbles' height={600} width={300} />
+          <ReactLoading type='bubbles' height={600} width={300} className='ReactLoading' />
           )
         : (
           <div className='countries-grid'>

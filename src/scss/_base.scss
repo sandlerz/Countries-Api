@@ -24,7 +24,7 @@
   --Box-shadow: 0.4rem 0.4rem 0.5rem 0rem hsl(0, 0%, 95%);
 }
 
-.dark {
+.dark-mode {
   --Text: hsl(210, 20%, 90%);
   --BG: hsl(207, 26%, 17%);
   --Elements: hsl(209, 23%, 22%);
@@ -67,6 +67,7 @@ body {
   font-size: 1.4rem;
   min-height: 100vh;
   background-color: var(--BG);
+  transition: background 300ms;
   overflow-x: hidden;
   width: 100vw;
   margin-right: calc(100vw - 100%);

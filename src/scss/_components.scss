@@ -62,6 +62,7 @@
     }
   }
 }
+
 .input__select__container {
   width: 20rem;
   font-size: 1.4rem;
@@ -116,4 +117,8 @@
     cursor: pointer;
     margin-bottom: 7rem;
   }
+}
+
+.ReactLoading{
+  filter: invert(1);
 }

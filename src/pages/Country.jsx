@@ -38,7 +38,7 @@ export default function Country () {
         </div>
         <p className='text2'>Error: 404</p>
         <h1 className='text'>Country No Found Error</h1>
-        <ReactLoading type='bubbles' height={300} width={300} />
+        <ReactLoading type='bubbles' height={300} width={300} className='ReactLoading' />
       </main>
     )
   }
@@ -46,7 +46,7 @@ export default function Country () {
   if (country.length === 0) {
     return (
       <main>
-        <ReactLoading type='bubbles' height={300} width={300} />
+        <ReactLoading type='bubbles' height={300} width={300} className='ReactLoading' />
       </main>
     )
   }

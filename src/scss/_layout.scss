@@ -7,6 +7,7 @@ header {
   width: 100%;
   margin-bottom: 5rem;
   box-shadow: var(--Box-shadow);
+  transition: background 200ms;
 
   .header-container {
     height: 8rem;
@@ -27,6 +28,7 @@ header {
       gap: 1rem;
       font-size: 1.8rem;
       cursor: pointer;
+      user-select: none;
 
       .dark-mode__icon {
         max-width: 3rem;
