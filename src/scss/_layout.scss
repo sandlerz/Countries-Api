@@ -54,23 +54,6 @@ main {
   }
 }
 
-.btn__container {
-  padding: 0 8rem;
-  display: flex;
-  justify-content: space-between;
-
-  .back__btn {
-    align-self: start;
-    width: 13.5rem;
-    height: 4rem;
-    border: none;
-    box-shadow: var(--Box-shadow);
-    background-color: var(--Elements);
-    cursor: pointer;
-    margin-bottom: 7rem;
-  }
-}
-
 .country_container {
   display: flex;
   width: 144rem;

@@ -1,6 +1,6 @@
 const allCountriesURL = 'https://restcountries.com/v2/all'
 
-export default async () => {
+const getCountries = async () => {
   try {
     const response = await fetch(allCountriesURL)
     if (response.ok) {
@@ -19,6 +19,8 @@ export default async () => {
     console.log(`Error connecting to server: ${error}`)
   }
 }
+
+export default getCountries
 
 export const getCountry = async name => {
   const URL = `https://restcountries.com/v2/name/${name}`
@@ -49,3 +51,12 @@ export const getBorderCountry = async name => {
     console.log(`Error connection to server: ${error}`)
   }
 }
+
+export const options = [
+  { value: 'Africa', label: 'Africa' },
+  { value: 'America', label: 'America' },
+  { value: 'Asia', label: 'Asia' },
+  { value: 'Europe', label: 'Europe' },
+  { value: 'Oceania', label: 'Oceania' },
+  { value: '', label: 'All' },
+]

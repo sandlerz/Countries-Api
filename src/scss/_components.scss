@@ -52,11 +52,68 @@
     padding-left: 6.5rem;
     font-size: 1.4rem;
     color: var(--Input);
+    border-radius: 0.5rem;
+
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--Input);
+    }
   }
-  .input__text:focus {
-    outline: none;
-  }
-  .input__text::placeholder {
-    color: var(--Input);
+}
+.input__select__container {
+  width: 20rem;
+  font-size: 1.4rem;
+}
+
+.input__select__control {
+  background-color: var(--Elements) !important;
+  height: 5.5rem;
+  border: 0.1rem solid var(--Elements) !important;
+  border-radius: 0.5rem !important;
+  padding: 0 1rem;
+  box-shadow: var(--Box-shadow);
+}
+
+.input__select__control:focus {
+  box-shadow: var(--Box-shadow) !important;
+}
+
+.input__select__single-value {
+  color: var(--Text) !important;
+}
+
+.input__select__indicator-separator {
+  display: none;
+}
+
+.input__select__menu {
+  background-color: var(--Elements) !important;
+  color: var(--Text) !important;
+}
+
+.input__select__menu-list {
+  padding: 1rem 0 !important;
+}
+
+.input__select__option {
+  padding: 0.5rem 2rem !important;
+}
+
+.btn__container {
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
+
+  .back__btn {
+    align-self: start;
+    width: 13.5rem;
+    height: 4rem;
+    border: none;
+    box-shadow: var(--Box-shadow);
+    background-color: var(--Elements);
+    cursor: pointer;
+    margin-bottom: 7rem;
   }
 }

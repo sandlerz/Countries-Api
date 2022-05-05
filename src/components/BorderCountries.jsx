@@ -8,7 +8,7 @@ export default function BorderCountries({ country }) {
 
   useEffect(() => {
     getBorderCountry(country).then(data => setDataCountry(data))
-  }, [])
+  }, [country])
 
   const handleBorderCountry = () => {
     navigate(`/${dataCountry}`)

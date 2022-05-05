@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { getCountry } from '../services/data'
 import { useEffect, useState } from 'react'
 import BorderCountries from '../components/BorderCountries'
-import { useNavigate, Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import ReactLoading from 'react-loading'
 
 export default function Country() {
