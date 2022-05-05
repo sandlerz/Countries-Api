@@ -10,7 +10,7 @@ const getCountries = async () => {
         population: country.population,
         region: country.region,
         capital: country.capital,
-        flag: country.flags.png,
+        flag: country.flags.png
       }))
       return allCountries
     }
@@ -58,5 +58,5 @@ export const options = [
   { value: 'Asia', label: 'Asia' },
   { value: 'Europe', label: 'Europe' },
   { value: 'Oceania', label: 'Oceania' },
-  { value: '', label: 'All' },
+  { value: '', label: 'All' }
 ]
