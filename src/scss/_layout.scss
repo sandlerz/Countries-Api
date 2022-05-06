@@ -47,9 +47,10 @@ main {
 
   .countries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 27rem);
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
     justify-content: space-between;
-    grid-row-gap: 4vw;
+    grid-row-gap: 2vw;
+    grid-column-gap: 2vw;
     width: 100%;
     max-width: 144rem;
     padding: 0 8rem 5rem;
@@ -62,6 +63,7 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 0 8rem;
+  gap: 2rem;
 }
 
 .country_container {

@@ -1,0 +1,110 @@
+@media only screen and (max-width: 31.25em) {
+  html {
+    font-size: 2.5vw;
+  }
+
+  header{
+    margin-bottom: 2.5rem;
+    padding: 0 2rem;
+
+    .header-container{
+      padding: 0;
+
+      .tittle{
+        font-size: 1.8rem;
+      }
+
+      .dark-mode {
+        font-size: 1.5rem;
+
+        .dark-mode__icon {
+          max-width: 2rem;
+        }
+      }
+    }
+  }
+
+  .inputs_container{
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 3rem;
+
+    .input__text{
+      width: 100%;
+      height: 5.8rem;
+      background-size: 2rem;
+      padding-left: 7rem;
+    }
+
+    .select__container{
+      height: 5.8rem;
+      width: 60%;
+    }
+  }
+
+  main{
+    gap: 4rem;
+
+    .countries-grid{
+      padding: 0 6rem;
+      grid-row-gap: 10vw;
+
+    }
+
+    
+  }
+  
+  .country_container{
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 2rem;
+    gap: 4rem;
+
+    .country__container__img{
+      width: 100%;
+      margin: 0;
+      height: auto;
+    }
+
+    .country__container__text{
+      width: 100%;
+      padding: 0;
+
+      .country__container__text__layout{
+        flex-direction: column;
+        gap: 4rem;
+
+        .country__container__text__right{
+          width: 100%;
+        }
+
+        .country__container__text__left{
+          width: 100%;
+        }
+
+      }
+      
+      .border__country__container{
+        flex-direction: column;
+
+        .border__country__container__btn{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .btn__container{
+    width: 100vw;
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+  }
+  
+  .country-card{
+    height: 37rem;
+  }
+
+  .ReactLoading{
+    width: 100%;
+  }
+}
