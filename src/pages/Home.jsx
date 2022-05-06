@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import getCountries, { options } from '../services/data'
-import Countries from '../components/Countries'
 import { useNavigate } from 'react-router-dom'
+import getCountries from '../services/data'
 import ReactLoading from 'react-loading'
-import Select from 'react-select'
+import Countries from '../components/Countries'
+import Select from '../components/Select'
 
 export default function Home () {
   const [dataCountries, setDataCountries] = useState([])
@@ -27,7 +27,7 @@ export default function Home () {
     setFilter(value)
   }
 
-  const handleRegionFilter = ({ value }) => {
+  const handleRegionFilter = (value) => {
     setRegionFilter(value)
   }
 
@@ -43,14 +43,8 @@ export default function Home () {
           value={filter}
         />
         <Select
-          options={options}
-          onChange={handleRegionFilter}
-          defaultValue={{
-            label: 'Filter by Region',
-            value: ''
-          }}
-          className='input__select__container'
-          classNamePrefix='input__select'
+          handleRegionFilter={handleRegionFilter}
+          regionFilter={regionFilter}
         />
       </div>
       {dataCountries.length === 0

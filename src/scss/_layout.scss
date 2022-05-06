@@ -47,13 +47,21 @@ main {
 
   .countries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 26rem);
+    grid-template-columns: repeat(auto-fill, 27rem);
     justify-content: space-between;
     grid-row-gap: 4vw;
     width: 100%;
     max-width: 144rem;
     padding: 0 8rem 5rem;
   }
+}
+
+.inputs_container {
+  max-width: 144rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
 }
 
 .country_container {

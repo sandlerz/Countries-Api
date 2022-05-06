@@ -22,6 +22,7 @@
   --Input: hsl(0, 0%, 52%);
   --Elements: hsl(0, 0%, 100%);
   --Box-shadow: 0.4rem 0.4rem 0.5rem 0rem hsl(0, 0%, 95%);
+  --FilterImg: invert(0);
 }
 
 .dark-mode {
@@ -29,6 +30,7 @@
   --BG: hsl(207, 26%, 17%);
   --Elements: hsl(209, 23%, 22%);
   --Box-shadow: 0.4rem 0.4rem 0.5rem 0rem hsl(207, 26%, 14%);
+  --FilterImg: invert(1);
 }
 
 // ## Typography
@@ -103,6 +105,11 @@ button {
 .back__btn:hover {
   filter: brightness(1.5);
   transition: filter 0.2s;
+}
+
+li{
+  list-style: none;
+  color: var(--Text);
 }
 
 // Scroll Bar
